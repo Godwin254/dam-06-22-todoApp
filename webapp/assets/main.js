@@ -73,6 +73,15 @@ const addTodo = () => {
     .post('http://localhost:3000/posts', {id,timestamp, body, status})
     .then(res => console.log(res.data))
     .catch(err => console.error(err));
+
+	//push todo object into the array
+	//Todos.push({id,body,timestamp, status, status});
+
+	const todos = Todos.map(todo => {
+		todo.push({ id, body, timestamp, status, status })
+	});
+
+	console.log(todos);
 	idField.value = "";
 	timeField.value = "";
 	bodyField.value = "";
