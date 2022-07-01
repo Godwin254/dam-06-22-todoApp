@@ -15,7 +15,7 @@ let Todos = [];
 
 
 
-
+//function to display todos
 const displayAllTodos = () => {
 	todoList.innerHTML = ""
 
