@@ -70,17 +70,7 @@ const displayAllTodos = () => {
 
 displayAllTodos();
 
-// const addTodo = () => {
-// 	const id = idField.value;
-// 	const timestamp = timeField.value;
-// 	const body = bodyField.value;
-// 	const status = "Not complete";
-// 	Todos.push({id,timestamp, body, status})
-// 	idField.value = "";
-// 	timeField.value = "";
-// 	bodyField.value = "";
-// 	displayAllTodos();
-// }
+
 
 const addTodo = () => {
 	console.log("click addTodo");
