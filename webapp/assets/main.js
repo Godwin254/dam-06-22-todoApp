@@ -27,6 +27,7 @@ const displayAllTodos = () => {
 			</div>
 			`;
 	} else {
+		
 		Todos.map(todo => {
 			console.trace("Todos");
 			console.log(todo);
