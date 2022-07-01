@@ -20,7 +20,7 @@ const displayAllTodos = () => {
 
 		todoList.innerHTML += `
 			<div class = "empty-todo">
-			<img src="./assets/images/undraw_empty_xct9.png" alt="empty image" style="width: 50%;">
+			<img src="./webapp/assets/images/undraw_empty_xct9.png" alt="empty image" style="width: 50%;">
 			<br>
 			<span style="font-family: 'Fira Sans', sans-serif; font-size: 20px; font-weight: bold;">There are no todos yet...</span>
 			<br>
