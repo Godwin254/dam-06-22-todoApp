@@ -13,6 +13,9 @@ let Todos = [];
 
 // REST api
 
+
+
+
 const displayAllTodos = () => {
 	todoList.innerHTML = ""
 
@@ -27,7 +30,7 @@ const displayAllTodos = () => {
 			</div>
 			`;
 	} else {
-		
+
 		Todos.map(todo => {
 			console.trace("Todos");
 			console.log(todo);
