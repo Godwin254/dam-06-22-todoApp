@@ -27,8 +27,26 @@ const displayAllTodos = () => {
 			<br>
 			</div>
 			`;
-		} else {		
-			for(let key in Todos){
+		} else {
+			Todos.map( todo => {
+				console.trace("Todos");
+
+				todoList.innerHTML += `
+				<div data-id="${todo.id}" class="todo-content-item">
+					<span class="todo-id">▪️ ${todo.id} ▪️</span>
+					${todo.status === "Complete" ? `<span style="text-decoration: line-through;" class="todo-text">${todo.body}</span>` : `<span class="todo-text">${todo.body}</span>`}
+					<span class="todo-date">Created at : ${todo.timestamp}</span>
+					${todo.status === "Complete" ? `<span class="todo-status complete">▪️ ${todo.status} ▪️</span>` : `<span class="todo-status incomplete">▪️ ${todo.status} ▪️</span>`}
+					<div style="display: flex; flex-direction: column; justify-content: space-around; align-items: center;" class="actions-window">
+						<i class="far fa-edit"></i>
+						<i class="far fa-trash-alt"></i>
+						${todo.status === "Complete" ? "" : '<i class="fas fa-check"></i>'}
+					</div>
+				</div>
+				`;
+
+			});		
+			/*for(let key in Todos){
 				let todo = Todos[key];
 				todoList.innerHTML += `
 				<div data-id="${todo.id}" class="todo-content-item">
@@ -43,7 +61,7 @@ const displayAllTodos = () => {
 					</div>
 				</div>
 				`;
-			};
+			};*/
 		}
 	}).catch(err => console.log(err));
 
@@ -65,6 +83,7 @@ displayAllTodos();
 // }
 
 const addTodo = () => {
+	console.log("click addTodo");
 	const id = idField.value;
 	const timestamp = timeField.value;
 	const body = bodyField.value;
