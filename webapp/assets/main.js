@@ -52,8 +52,20 @@ const displayAllTodos = () => {
 		});
 		
 	}
+	console.log(Todos);
+}
 
-	
+displayAllTodos();
+
+
+
+const addTodo = () => {
+	console.log("click addTodo");
+	const id = idField.value;
+	const timestamp = timeField.value;
+	const body = bodyField.value;
+	const status = "Not complete";
+
 	//push the values into the Todos array
 	Todos.push({id, timestamp, body, status});
 
